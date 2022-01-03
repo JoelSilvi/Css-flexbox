@@ -23,22 +23,35 @@
       display: flex;
       font-size: 26px;
       flex-direction: row-reverse;
-      /* column | column-reverse | row | row-reverse */
+      /* row | row-reverse | column | column-reverse el primer valor es el que aplica por defecto  */
       flex-wrap: wrap-reverse;
-      /* nowrap | wrap | wrap-reverse */
+      /* nowrap | wrap | wrap-reverse el primer valor es el que aplica por defecto */
       /* flex-flow shorthand de flex-direction y flex-wrap */
-      flex-flow: column wrap;
-      justify-content: space-evenly;
+      flex-flow: row wrap;
+      justify-content: flex-start;
       /* Define la alineación de los elementos hijos, respecto del eje principal */
-      /* flex-start | center | flex-end | space-between | space-around | space-evenly */
+      /* flex-start | center | flex-end | space-between | space-around | space-evenly el primer valor es el que aplica por defecto */
+
+      align-items: stretch;
+      /* Define la alineación de los hijos en el eje transversal (cross axis), dentro de cada línea que se genere*/
+      /* stretch | flex-start | flex-end | center | baseline  */
+      align-content: stretch;
+      /* Define la alineación de los hijos en el eje transversal (cross axis), NO funciona cuando los hijos están en una sola línea (se activa con WRAP o WRAP-REVERSE)*/
+      /* flex-start | flex-end | center | space-between | space-around | space-evenly | stretch */
+
     }
 
     .item {
       border: medium solid #999;
       background-color: #666;
       width: 20%;
-      height: 20%;
+      /* height: 20%; */
     }
+
+    /* .item:nth-child(2),
+    .item:nth-child(17) {
+      font-size: 36px;
+    } */
   </style>
 </head>
 
