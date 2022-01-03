@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: black;
+      height: 30vh;
+
+      /* caja flexible de línea */
+      /* display: inline-flex; */
+      /* caja flexible de bloque */
+      display: flex;
+      font-size: 26px;
+      flex-direction: row-reverse;
+      /* column | column-reverse | row | row-reverse */
+      flex-wrap: wrap-reverse;
+      /* nowrap | wrap | wrap-reverse */
+      /* flex-flow shorthand de flex-direction y flex-wrap */
+      flex-flow: row wrap;
+    }
+
+    .item {
+      border: medium solid #999;
+      background-color: #666;
+      width: 20%;
+      height: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <article class="item">Flex Item 1</article>
+    <article class="item">Flex Item 2</article>
+    <article class="item">Flex Item 3</article>
+  </section>
+  <br><br>
+  <section class="container">
+    <article class="item">Flex Item 1</article>
+    <article class="item">Flex Item 2</article>
+    <article class="item">Flex Item 3</article>
+  </section>
+  <br><br>
+  <section class="container">
+    <article class="item">item 1</article>
+    <article class="item">item 2</article>
+    <article class="item">item 3</article>
+    <article class="item">item 4</article>
+    <article class="item">item 5</article>
+    <article class="item">item 6</article>
+    <article class="item">item 7</article>
+    <article class="item">item 8</article>
+    <article class="item">item 9</article>
+    <article class="item">item 10</article>
+    <article class="item">item 11</article>
+    <article class="item">item 12</article>
+    <article class="item">item 13</article>
+    <article class="item">item 14</article>
+    <article class="item">item 15</article>
+    <article class="item">item 16</article>
+    <article class="item">item 17</article>
+    <article class="item">item 18</article>
+    <article class="item">item 19</article>
+  </section>
+</body>
+
+</html>
