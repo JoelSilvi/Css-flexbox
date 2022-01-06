@@ -16,18 +16,19 @@
     .container {
       background-color: black;
       height: 30vh;
+      width: 1000px;
 
       /* caja flexible de línea */
       /* display: inline-flex; */
       /* caja flexible de bloque */
       display: flex;
-      font-size: 26px;
-      flex-direction: row-reverse;
+
+      flex-direction: row;
       /* row | row-reverse | column | column-reverse el primer valor es el que aplica por defecto  */
-      flex-wrap: wrap-reverse;
+      flex-wrap: nowrap;
       /* nowrap | wrap | wrap-reverse el primer valor es el que aplica por defecto */
       /* flex-flow shorthand de flex-direction y flex-wrap */
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: flex-start;
       /* Define la alineación de los elementos hijos, respecto del eje principal */
       /* flex-start | center | flex-end | space-between | space-around | space-evenly el primer valor es el que aplica por defecto */
@@ -35,7 +36,7 @@
       align-items: stretch;
       /* Define la alineación de los hijos en el eje transversal (cross axis), dentro de cada línea que se genere*/
       /* stretch | flex-start | flex-end | center | baseline  */
-      align-content: stretch;
+      align-content: flex-start;
       /* Define la alineación de los hijos en el eje transversal (cross axis), NO funciona cuando los hijos están en una sola línea (se activa con WRAP o WRAP-REVERSE)*/
       /* flex-start | flex-end | center | space-between | space-around | space-evenly | stretch */
 
@@ -44,8 +45,19 @@
     .item {
       border: medium solid #999;
       background-color: #666;
-      width: 20%;
+      width: 100px;
+      /* width: 20%; */
+      flex-grow: 1;
+      /*valor por defecto es 0, cuando la caja flexbox tenga espacio sobrante, es la habilidad de crecer, no se aceptan negativos*/
+      flex-shrink: 1;
+      /* valor por defecto es 1, cuando la caja flexbox no tenga espacio sobrante, es la habilidad de encogerse, no se aceptan valores negativos */
+      flex-basis: auto;
+      /* valor por defecto es auto */
       /* height: 20%; */
+    }
+
+    .item:nth-child(2) {
+      flex-grow: 2;
     }
 
     /* .item:nth-child(2),
@@ -61,7 +73,7 @@
     <article class="item">Flex Item 2</article>
     <article class="item">Flex Item 3</article>
   </section>
-  <br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <section class="container">
     <article class="item">Flex Item 1</article>
     <article class="item">Flex Item 2</article>
