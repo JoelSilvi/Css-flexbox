@@ -16,7 +16,7 @@
     .container {
       background-color: black;
       height: 30vh;
-      width: 1000px;
+      width: 100%;
 
       /* caja flexible de línea */
       /* display: inline-flex; */
@@ -45,9 +45,9 @@
     .item {
       border: medium solid #999;
       background-color: #666;
-      width: 100px;
+      /* width: 100px; */
       /* width: 20%; */
-      flex-grow: 1;
+      flex-grow: 0;
       /*valor por defecto es 0, cuando la caja flexbox tenga espacio sobrante, es la habilidad de crecer, no se aceptan negativos*/
       flex-shrink: 1;
       /* valor por defecto es 1, cuando la caja flexbox no tenga espacio sobrante, es la habilidad de encogerse, no se aceptan valores negativos */
@@ -57,7 +57,8 @@
     }
 
     .item:nth-child(2) {
-      flex-grow: 2;
+      /* flex-grow: 2; */
+      flex-shrink: 2;
     }
 
     /* .item:nth-child(2),
