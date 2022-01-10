@@ -60,17 +60,25 @@
       /* valor por defecto es auto */
       flex: 0 1 100px;
       /* Es un shorthand de las propiedades flex-grow flex-shrink y flex-basis, en ese orden */
+      order: 0;
+      /* Representa el orden que tendrán los elementos hijos en la caja flexbox
+      Valor por defecto 0
+      Se aceptan valores positivos y negativos
+      Un valor menor siempre irá antes que un valor mayor */
+      align-self: stretch;
+      /* stretch | flex-start | flex-end | center | baseline  */
+      /* Sobreescribe el valor de la propiedad align-items solo para el elemento hijo especifico */
     }
 
     .item:nth-child(2) {
       /* flex-grow: 2; */
-      flex-shrink: 2;
+      /* flex-shrink: 2; */
+      order: 1;
     }
 
-    /* .item:nth-child(2),
-    .item:nth-child(17) {
-      font-size: 36px;
-    } */
+    .item:nth-child(3) {
+      align-self: center;
+    }
   </style>
 </head>
 
@@ -79,6 +87,8 @@
     <article class="item">Flex Item 1</article>
     <article class="item">Flex Item 2</article>
     <article class="item">Flex Item 3</article>
+    <article class="item">Flex Item 4</article>
+    <article class="item">Flex Item 5</article>
   </section>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <section class="container">
