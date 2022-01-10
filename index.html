@@ -15,7 +15,7 @@
 
     .container {
       background-color: black;
-      height: 30vh;
+      height: 400px;
       width: 100%;
 
       /* caja flexible de línea */
@@ -44,16 +44,22 @@
 
     .item {
       border: medium solid #999;
-      background-color: #666;
       /* width: 100px; */
+      /* height: 20%; */
       /* width: 20%; */
+      background-color: #666;
       flex-grow: 0;
       /*valor por defecto es 0, cuando la caja flexbox tenga espacio sobrante, es la habilidad de crecer, no se aceptan negativos*/
       flex-shrink: 1;
       /* valor por defecto es 1, cuando la caja flexbox no tenga espacio sobrante, es la habilidad de encogerse, no se aceptan valores negativos */
       flex-basis: auto;
+      flex-basis: 100px;
+      /* Es el tamaño del elemento hijo dentro de la línea de la caja flexbox,
+       Si la caja flexbox tiene dirección de fila, flex-basis representa el width,
+       Si la caja flexbox tiene dirección de columna, flex-basis representa el height  */
       /* valor por defecto es auto */
-      /* height: 20%; */
+      flex: 0 1 100px;
+      /* Es un shorthand de las propiedades flex-grow flex-shrink y flex-basis, en ese orden */
     }
 
     .item:nth-child(2) {
